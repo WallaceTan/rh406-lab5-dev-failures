@@ -9,6 +9,7 @@
     - name: Check local time
       command: date
       register: command_result
+      changed_when: false
 
     - name: Print local time
       debug:
