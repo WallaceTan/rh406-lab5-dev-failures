@@ -20,6 +20,7 @@
         yum:
           name: "{{ web_package }}"
           state: latest
+        failed_when: web_package == "httpd"
 
       rescue:
         - name: Install {{ db_package }} package
